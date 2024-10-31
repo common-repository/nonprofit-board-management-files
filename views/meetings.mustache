@@ -1,0 +1,37 @@
+<table class="meetings">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Date</th>
+			<th>Location</th>
+			<th>Agenda</th>
+			<th>Minutes</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#meetings}}
+			<tr>
+				<td>{{title}}</td>
+				<td>{{{date}}}</td>
+				<td>
+					{{#room}}
+						<a href="{{map}}" target="_blank" alt="View on Google Maps">{{room}}</a>
+					{{/room}}
+					{{^room}}
+						{{{location}}}
+					{{/room}}
+				</td>
+				<td>
+					{{#agenda}}
+						<a href="{{agenda_url}}" target="_blank">Agenda</a>
+					{{/agenda}}
+				</td>
+				<td>
+					{{#minutes}}
+						<a href="{{minutes_url}}" target="_blank">Minutes</a>
+					{{/minutes}}
+				</td>
+			</tr>
+		{{/meetings}}
+	</tbody>
+</table>

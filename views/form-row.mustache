@@ -1,0 +1,11 @@
+<tr>
+	<td><label for="{{name}}">{{label}}</label></td>
+	<td>
+		{{#input}}
+			{{{input}}}
+		{{/input}}
+		{{^input}}
+			{{>text-input}}
+		{{/input}}
+	</td>
+</tr>
